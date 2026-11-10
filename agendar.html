@@ -122,6 +122,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--azul); outline-
     btn.lang = lang === "es" ? "pt-BR" : "es";
     btn.setAttribute("aria-label", lang === "es" ? "Ver em português" : "Ver en español");
     document.querySelectorAll('a[href="./"], a[href="./#es"]').forEach(function (a) { a.setAttribute("href", lang === "es" ? "./#es" : "./"); });
+    var w = document.querySelector('a[data-t="wa"]');
+    if (w) w.setAttribute("href", "https://wa.me/5548991079819?text=" + encodeURIComponent(lang === "es" ? "Hola, llegué por el sitio de Volnei Gestão RM." : "Olá, vim pelo site da Volnei Gestão RM."));
     btn.dataset.lang = lang;
   }
   btn.addEventListener("click", function () { set(btn.dataset.lang === "es" ? "pt" : "es"); });
