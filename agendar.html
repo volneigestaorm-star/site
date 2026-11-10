@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="icone-180.png">
+<meta property="og:title" content="Agende uma conversa · Volnei Gestão RM">
+<meta property="og:description" content="30 minutos por Google Meet, sem custo e sem compromisso.">
+<meta property="og:image" content="https://volneigestaorm.com.br/compartilhar.jpg">
+<meta property="og:url" content="https://volneigestaorm.com.br/agendar.html">
+<meta name="theme-color" content="#393836">
+<title>Agende uma conversa · Volnei Gestão RM</title>
+<meta name="description" content="Escolha o melhor dia e horário para uma conversa de 30 minutos por Google Meet com a Volnei Gestão RM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Identidade visual 1.0: chumbo da logo, fundo claro, azul só em detalhes. Mesmos valores do index.html. */
+:root {
+  --chumbo: #393836; --chumbo-escuro: #262524; --azul: #1F5FD6; --azul-claro: #A9C1F5;
+  --cinza: #6B6A66; --neutro: #F2F2F0; --branco: #FFFFFF; --linha: #E2E1DD;
+  --font-display: "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--neutro); color: var(--chumbo); font-family: var(--font-body); font-size: 16px; line-height: 1.6; }
+.in { max-width: 980px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+a { color: var(--azul); }
+h1, h2 { font-family: var(--font-display); color: var(--chumbo); letter-spacing: -.02em; text-wrap: balance; margin: 0; }
+.k { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--cinza); }
+.barra { display: block; width: 64px; height: 6px; background: var(--azul); margin-top: 14px; }
+nav.top { background: var(--branco); border-bottom: 1px solid var(--linha); }
+nav.top .in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand img { height: 56px; width: auto; display: block; }
+.links { display: flex; gap: 14px; align-items: center; }
+.links a.volta { color: var(--chumbo); text-decoration: none; font-size: 14.5px; font-weight: 500; }
+.links a.volta:hover { color: var(--azul); }
+.idioma { font: inherit; font-size: 13px; font-weight: 600; color: var(--chumbo); background: transparent; border: 1px solid var(--linha); border-radius: 6px; padding: 6px 10px; cursor: pointer; }
+.idioma:hover { border-color: var(--chumbo); }
+@media (max-width: 640px) { .brand img { height: 46px; } }
+.abre { padding-block: 40px 28px; }
+.abre h1 { font-weight: 800; font-size: clamp(28px, 4.6vw, 44px); line-height: 1.08; margin-top: 10px; }
+.abre p { color: var(--cinza); font-size: 17px; max-width: 58ch; margin: 18px 0 0; }
+.passos { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; counter-reset: p; }
+.passos li { background: var(--branco); border: 1px solid var(--linha); border-radius: 10px; padding: 16px; counter-increment: p; font-size: 14.5px; color: var(--cinza); }
+.passos li::before { content: counter(p); display: block; font-family: var(--font-display); font-weight: 800; font-size: 20px; color: var(--azul); }
+.passos b { display: block; color: var(--chumbo); font-size: 15.5px; margin: 2px 0; }
+@media (max-width: 720px) { .passos { grid-template-columns: 1fr; gap: 8px; } .passos li { padding: 10px 14px 10px 44px; position: relative; } .passos li::before { position: absolute; left: 16px; top: 8px; } .passos li span { display: none; } }
+.cal { background: var(--branco); border: 1px solid var(--linha); border-radius: 12px; overflow: hidden; }
+.cal iframe { display: block; width: 100%; height: 1060px; border: 0; }
+@media (max-width: 600px) { .cal iframe { height: 1700px; } }
+.cal .reserva { padding: 36px 20px; text-align: center; }
+.btn { display: inline-flex; align-items: center; justify-content: center; font: inherit; font-weight: 600; font-size: 15px; border-radius: 8px; padding: 12px 20px; text-decoration: none; border: 1.5px solid transparent; }
+.btn.pri { background: var(--azul); color: var(--branco); }
+.btn.sec { border-color: var(--chumbo); color: var(--chumbo); background: transparent; }
+.btn.sec:hover { background: var(--branco); }
+.alt { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; padding-block: 22px 44px; color: var(--cinza); font-size: 14.5px; }
+.alt span { min-width: 0; }
+footer { background: var(--chumbo-escuro); color: #C9C8C4; }
+footer .in { padding-block: 26px 34px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--azul); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Principal">
+  <div class="in">
+    <a class="brand" href="./" aria-label="Volnei Gestão RM, início"><img src="logo.jpg" width="1190" height="462" alt="Volnei Gestão RM"></a>
+    <div class="links">
+      <a class="volta" href="./" data-t="volta">Voltar ao site</a>
+      <button type="button" class="idioma" id="idioma" lang="es" aria-label="Ver en español">ES</button>
+    </div>
+  </div>
+</nav>
+<main>
+  <div class="in abre">
+    <span class="k" data-t="k">30 minutos · sem custo</span>
+    <h1 data-t="h1">Escolha o melhor horário para conversarmos</h1>
+    <span class="barra"></span>
+    <p data-t="p">Uma conversa direta por Google Meet para conhecer a sua gestora e mostrar como cuidamos de preço, anúncios e canais. Sem compromisso.</p>
+    <ol class="passos">
+      <li><b data-t="s1">Escolha o dia e a hora</b><span data-t="s1d">No calendário abaixo, no horário de Brasília.</span></li>
+      <li><b data-t="s2">Receba o convite</b><span data-t="s2d">O link do Google Meet chega no seu e-mail na hora.</span></li>
+      <li><b data-t="s3">Conversamos 30 minutos</b><span data-t="s3d">Você sai com uma visão clara do que dá para melhorar.</span></li>
+    </ol>
+  </div>
+  <div class="in">
+    <div class="cal" id="cal">
+      <div class="reserva"><a class="btn pri" href="https://calendar.app.google/cbcEhGAmVRNDDZX27" target="_blank" rel="noopener" data-t="abrir">Abrir o calendário</a></div>
+    </div>
+    <div class="alt">
+      <span data-t="alt">Não achou um horário bom ou prefere escrever?</span>
+      <a class="btn sec" href="https://wa.me/5548991079819?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Volnei%20Gest%C3%A3o%20RM." target="_blank" rel="noopener" data-t="wa">Falar pelo WhatsApp</a>
+    </div>
+  </div>
+</main>
+<footer><div class="in"><span>Volnei Gestão RM · CNPJ 61.629.469/0001-89</span><span data-t="rod">Florianópolis, SC · gestão de receita para temporada, pousadas e pequenos hotéis</span></div></footer>
+<script>
+(function () {
+  // URL de incorporação da agenda do Google (Compartilhar > Incorporação no site > Inline). Vazia = mostra só o botão.
+  var EMBED = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1ttUnWN8i8r-ovDHi3iKNGgFF9HeTKryab3cYaIm6x7RZcVjNCecwHaQW0RsL8W1UYJt3gjbKF?gv=true";
+  var ES = {
+    volta: "Volver al sitio", k: "30 minutos · sin costo", h1: "Elija el mejor horario para conversar",
+    p: "Una conversación directa por Google Meet para conocer su gestora y mostrar cómo cuidamos precio, anuncios y canales. Sin compromiso.",
+    s1: "Elija el día y la hora", s1d: "En el calendario de abajo. El horario se ajusta a su zona.",
+    s2: "Reciba la invitación", s2d: "El enlace de Google Meet llega a su correo al instante.",
+    s3: "Conversamos 30 minutos", s3d: "Usted sale con una visión clara de lo que se puede mejorar.",
+    abrir: "Abrir el calendario", alt: "¿No encontró un buen horario o prefiere escribir?", wa: "Hablar por WhatsApp",
+    rod: "Florianópolis, Brasil · gestión de ingresos para alquiler temporario, posadas y hoteles pequeños"
+  };
+  var PT = {};
+  var nodes = document.querySelectorAll("[data-t]");
+  nodes.forEach(function (n) { PT[n.getAttribute("data-t")] = n.textContent; });
+  var btn = document.getElementById("idioma");
+  function set(lang) {
+    var d = lang === "es" ? ES : PT;
+    nodes.forEach(function (n) { n.textContent = d[n.getAttribute("data-t")]; });
+    document.documentElement.lang = lang === "es" ? "es" : "pt-BR";
+    document.title = (lang === "es" ? "Agende una conversación" : "Agende uma conversa") + " · Volnei Gestão RM";
+    btn.textContent = lang === "es" ? "PT" : "ES";
+    btn.lang = lang === "es" ? "pt-BR" : "es";
+    btn.setAttribute("aria-label", lang === "es" ? "Ver em português" : "Ver en español");
+    document.querySelectorAll('a[href="./"], a[href="./#es"]').forEach(function (a) { a.setAttribute("href", lang === "es" ? "./#es" : "./"); });
+    btn.dataset.lang = lang;
+  }
+  btn.addEventListener("click", function () { set(btn.dataset.lang === "es" ? "pt" : "es"); });
+  var nav = (navigator.language || "").toLowerCase();
+  set(location.hash === "#es" || (location.hash !== "#pt" && nav.indexOf("es") === 0) ? "es" : "pt");
+  if (EMBED) {
+    var f = document.createElement("iframe");
+    f.src = EMBED; f.title = "Calendário de agendamento"; f.loading = "lazy";
+    var c = document.getElementById("cal"); c.textContent = ""; c.appendChild(f);
+  }
+})();
+</script>
+</body>
+</html>
