@@ -190,6 +190,12 @@ footer .in { padding-block: 26px 34px; display: flex; justify-content: space-bet
 .idioma { font: inherit; font-size: 13px; font-weight: 600; color: var(--chumbo); background: transparent; border: 1px solid var(--linha); border-radius: 6px; padding: 6px 10px; cursor: pointer; text-decoration: none; }
 .idioma:hover { border-color: var(--chumbo); }
 @media (max-width: 640px) { .links { gap: 10px; } .links .idioma { display: inline-block !important; } }
+.links a.cliente { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--chumbo); border: 1px solid var(--linha); border-radius: 6px; padding: 6px 10px; white-space: nowrap; }
+.links a.cliente:hover { border-color: var(--chumbo); color: var(--chumbo); }
+@media (max-width: 960px) { .links a.cliente { padding: 7px 9px; } .links a.cliente .longo { display: none; } .links a.cliente svg { width: 16px; height: 16px; } }
+@media (max-width: 880px) { .links a.cliente { display: none !important; } }
+footer a.cliente-rod { display: inline-flex; align-items: center; gap: 6px; }
+@media (max-width: 880px) { footer a.cliente-rod { border: 1px solid currentColor; border-radius: 6px; padding: 9px 14px; font-weight: 600; } }
 footer .in { align-items: center; }
 footer .redes { display: flex; gap: 16px; flex-wrap: wrap; }
 footer a { color: #E6E5E1; text-decoration: none; font-weight: 600; }
@@ -224,6 +230,7 @@ section[id], header[id] { scroll-margin-top: 84px; }
         <a href="#o-que-fazemos">O que fazemos</a>
         <a href="#como-trabalhamos">Como trabalhamos</a>
         <a href="#resultado">Resultado</a>
+        <a class="cliente" href="https://painel.volneigestaorm.workers.dev/" rel="nofollow noopener" aria-label="Área do cliente, entrada protegida"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span class="longo">Área do cliente</span></a>
         <a class="idioma" href="es/" hreflang="es" lang="es" data-ir="es" aria-label="Ver en español">ES</a>
         <a class="btn pri" href="agendar.html#pt" data-ev="agendar">Agendar conversa</a>
       </div>
@@ -394,7 +401,7 @@ section[id], header[id] { scroll-margin-top: 84px; }
     </div>
   </section>
 </main>
-<footer><div class="in"><div class="col"><span>Volnei Gestão RM · CNPJ 61.629.469/0001-89</span><span>Florianópolis, SC · gestão de receita para temporada, pousadas e pequenos hotéis · RM Partner da PriceLabs</span></div><div class="redes"><a href="privacidade.html">Privacidade</a><a href="https://www.instagram.com/volneirm/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/company/145426030/" target="_blank" rel="noopener">LinkedIn</a></div></div></footer>
+<footer><div class="in"><div class="col"><span>Volnei Gestão RM · CNPJ 61.629.469/0001-89</span><span>Florianópolis, SC · gestão de receita para temporada, pousadas e pequenos hotéis · RM Partner da PriceLabs</span></div><div class="redes"><a class="cliente-rod" href="https://painel.volneigestaorm.workers.dev/" rel="nofollow noopener"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Área do cliente</a><a href="privacidade.html">Privacidade</a><a href="https://www.instagram.com/volneirm/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/company/145426030/" target="_blank" rel="noopener">LinkedIn</a></div></div></footer>
 </div>
 
 <script>
